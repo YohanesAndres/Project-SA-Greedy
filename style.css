@@ -1,124 +1,141 @@
-/* CSS Dasar */
+/* CSS Menarik dan Responsive */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-  }
-  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.sidebar {
+  position: fixed;
+  width: 17vw;
+  height: 100vh;
+  padding: 27px 22px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px 4px rgba(9, 0, 67, 0.08);
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.menu {
+  margin-top: 40px;
+}
+
+.sub-menu {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 17px;
+  color: blueviolet;
+}
+
+select {
+  width: 100%;
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  background-color: #FFFFFF;
+  padding: 5px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.title {
+  color: rgb(81, 0, 255);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title > .description {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
+}
+
+.content {
+  padding-left: 17vw;
+}
+
+.input-side {
+  width: 100%;
+  height: 33px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  background-color: #FFFFFF;
+  padding: 5px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.tbl {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl td:first-child {
+  width: 100px;
+  font-weight: bold;
+}
+
+.tbl tr {
+  height: 30px;
+}
+
+.tbl input {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  font-size: 13px;
+  color: #333333;
+}
+
+.tbl-hasil {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl-hasil td:first-child {
+  width: 250px;
+  font-weight: bold;
+}
+
+.tbl-hasil tr {
+  height: 30px;
+}
+
+.tbl-hasil input {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  font-size: 13px;
+  color: #333333;
+}
+
+@media (max-width: 768px) {
   .sidebar {
-    position: fixed;
-    width: 17vw;
-    height: 100vh;
-    padding: 27px 22px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px 4px rgba(9, 0, 67, 0.08);
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    z-index: 2;
-  }
-  
-  .sidebar::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .menu {
-    margin-top: 40px;
-  }
-  
-  .sub-menu {
-    margin-top: 20px;
-  }
-  
-  label {
-    font-size: 17px;
-    color: blueviolet;
-  }
-  
-  select {
     width: 100%;
-    height: 35px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid blueviolet;
-    background-color: #FFFFFF;
-    padding: 5px;
-    font-size: 13px;
-    color: #333333;
-  }
-  
-  /* .btn-side {
-    background-color: transparent;
-    border: none;
-    font-size: 17px;
-    color: blueviolet;
-    cursor: pointer;
-    margin-top: 0px;
-    transition: color 0.3s ease;
-  }
-  
-  .btn-side:hover {
-    color: #800080;
-  } */
-
-  .title{
-    color: rgb(81, 0, 255);
+    height: auto;
+    padding: 20px;
+    box-shadow: none;
+    position: static;
   }
 
-  .title > .description{
-    margin-top: 5px;
-    font-size: 10px;
-    font-weight: 600;
-    color:red;
-}
-
-.content{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: auto;
-    padding-left: 19vw;
-}
-
-.input-side{
-    width: 100%;
-    height: 33px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid blueviolet;
-    background-color: #FFFFFF;
-    padding: 5px;
-    font-size: 13px;
-    color: #333333;
-}
-.tbl{
-    margin-top: 200px;
-}
-.tbl td:first-child{
-    width: 100px; 
-}
-
-.tbl tr{
-    height: 30px;
-}
-input{
-    width: 700px;
-    height: 30px;
-}
-
-.tbl-hasil{
-    margin-top: 200px;
-}
-.tbl-hasil td:first-child{
-    width: 250px; 
-}
-
-.tbl-hasil tr{
-    height: 30px;
+  .content {
+    padding-left: 0;
+  }
 }
