@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Project Akhir Strategi Algortmik</title>
-</head>
-    <body>
-        <div class="sidebar">
-
+</head >
+    <body id="myDIV">
+        <div class="sidebar" >
             <div class="title">
                 <h2>Algoritma Greedy</h2>
-                <div class="description">
+                <div class="description" >
                     Penjadwalan Tugas
                 </div>
             </div>
@@ -62,6 +61,7 @@
         
         
     </body>
+
     <script>
         const content = document.querySelector('.content');
         let bobot = [60,45,18,26];
@@ -215,19 +215,19 @@
                 content.innerHTML=`
                 <table  class="tbl-hasil">
                     <tr>
-                        <td>tugas yang dijadwalkan:</td>
+                        <td>Tugas yang dijadwalkan:</td>
                         <td>
                             <th>${schedule}</th>
                         </td>
                     </tr>
                     <tr>
-                        <td>total profit:</td>
+                        <td>Total Profit:</td>
                         <td>
                             <th>${total_profit}</th>
                         </td>
                     </tr>
                     <tr>
-                        <td>sisa waktu:</td>
+                        <td>Sisa Waktu:</td>
                         <td>
                             <th>${remaining_time}</th>
                         </td>
@@ -249,19 +249,19 @@
                 content.innerHTML=`
                 <table  class="tbl-hasil">
                     <tr>
-                        <td>tugas yang dijadwalkan:</td>
+                        <td>Tugas yang dijadwalkan:</td>
                         <td>
                             <th>${schedule}</th>
                         </td>
                     </tr>
                     <tr>
-                        <td>total profit:</td>
+                        <td>Total Profit:</td>
                         <td>
                             <th>${total_profit}</th>
                         </td>
                     </tr>
                     <tr>
-                        <td>sisa waktu:</td>
+                        <td>Sisa Waktu:</td>
                         <td>
                             <th>${remaining_time}</th>
                         </td>
@@ -283,19 +283,19 @@
                 content.innerHTML=`
                 <table  class="tbl-hasil">
                     <tr>
-                        <td>tugas yang dijadwalkan:</td>
+                        <td>Tugas yang dijadwalkan:</td>
                         <td>
                             <th>${schedule}</th>
                         </td>
                     </tr>
                     <tr>
-                        <td>total profit:</td>
+                        <td>Total Profit:</td>
                         <td>
                             <th>${total_profit}</th>
                         </td>
                     </tr>
                     <tr>
-                        <td>sisa waktu:</td>
+                        <td>Sisa Waktu:</td>
                         <td>
                             <th>${remaining_time}</th>
                         </td>
@@ -339,7 +339,7 @@
             </table>
 
 
-            <div>
+            <div class="btnsave">
               <button onclick="simpandata1()" type="submit">Simpan Data</button>
             </div>
             `  
@@ -350,31 +350,31 @@
             <tr>
                 <td>UAS</td>
                 <td>
-                    <input type="number" id="profit1"  value="${profit[0]}" placeholder="Masukkan profit">
+                    <input type="number" id="profit1"  value="${profit[0]}" placeholder="Masukkan Nilai">
                 </td>
             </tr>
             <tr>
                 <td>UTS</td>
                 <td>
-                    <input type="number" id="profit2"  value="${profit[1]}" placeholder="Masukkan profit">
+                    <input type="number" id="profit2"  value="${profit[1]}" placeholder="Masukkan Nilai">
                 </td>
             </tr>
             <tr>
                 <td>TUGAS</td>
                 <td>
-                    <input type="number" id="profit3"  value="${profit[2]}" placeholder="Masukkan profit">
+                    <input type="number" id="profit3"  value="${profit[2]}" placeholder="Masukkan Nilai">
                 </td>
             </tr>
             <tr>
                 <td>KUIS</td>
                 <td>
-                    <input type="number" id="profit4"  value="${profit[2]}" placeholder="Masukkan profit">
+                    <input type="number" id="profit4"  value="${profit[2]}" placeholder="Masukkan Nilai">
                 </td>
             </tr>
             </table>
 
 
-            <div>
+            <div class="btnsave">
               <button onclick="simpandata2()" type="submit">Simpan Data</button>
             </div>
             `
