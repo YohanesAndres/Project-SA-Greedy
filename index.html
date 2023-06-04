@@ -53,12 +53,25 @@
 
             </div>
 
+            <footer class="ftr">
+                <div class="container text-center"  >
+                    &copy; <span id="year"></span> My App. Strategi Algoritma.
+                </div>
+            </footer>
+            
+            <script>
+                // Mengupdate tahun secara dinamis
+                const yearElement = document.getElementById('year');
+                const currentYear = new Date().getFullYear();
+                yearElement.textContent = currentYear;
+            </script>
+
         </div>
+
 
         <div class="content">
 
         </div>
-        
         
     </body>
 
@@ -213,7 +226,16 @@
                 }
 
                 content.innerHTML=`
+
+                <div class="str-c">
+                    <div>
+                    <div class="">Variasi Greedy By Profit</div>
+                    </div>
+                </div>
+                <hr>
+
                 <table  class="tbl-hasil">
+                    
                     <tr>
                         <td>Tugas yang dijadwalkan:</td>
                         <td>
@@ -247,6 +269,14 @@
                 }
 
                 content.innerHTML=`
+
+                <div class="str-c">
+                    <div>
+                    <div class="">Variasi Greedy By Weight</div>
+                    </div>
+                </div>
+                <hr>
+
                 <table  class="tbl-hasil">
                     <tr>
                         <td>Tugas yang dijadwalkan:</td>
@@ -281,6 +311,14 @@
                 }
 
                 content.innerHTML=`
+
+                <div class="str-c">
+                    <div>
+                    <div class="">Variasi Greedy By Density</div>
+                    </div>
+                </div>
+                <hr>
+
                 <table  class="tbl-hasil">
                     <tr>
                         <td>Tugas yang dijadwalkan:</td>
@@ -311,72 +349,87 @@
             if (setting=="bobot") {
                 content.innerHTML=`
 
-            <table class="tbl">
-            <tr>
-                <td>UAS</td>
-                <td>
-                    <input type="number" id="bobot1" value="${bobot[0]}"  placeholder="Masukkan Jam">
-                </td>
-            </tr>
-            <tr>
-                <td>UTS</td>
-                <td>
-                    <input type="number" id="bobot2"  value="${bobot[1]}" placeholder="Masukkan Jam">
-                </td>
-            </tr>
-            <tr>
-                <td>TUGAS</td>
-                <td>
-                    <input type="number" id="bobot3"  value="${bobot[2]}" placeholder="Masukkan Jam">
-                </td>
-            </tr>
-            <tr>
-                <td>KUIS</td>
-                <td>
-                    <input type="number" id="bobot4"  value="${bobot[3]}" placeholder="Masukkan Jam">
-                </td>
-            </tr>
-            </table>
+                <div class="str-c">
+                    <div>
+                    <div class=""> Setting Jam</div>
+                    </div>
+                </div>
+                <hr>
+                
+                <table class="tbl">
+                <tr>
+                    <td>UAS</td>
+                    <td>
+                        <input type="number" id="bobot1" value="${bobot[0]}"  placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>UTS</td>
+                    <td>
+                        <input type="number" id="bobot2"  value="${bobot[1]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>TUGAS</td>
+                    <td>
+                        <input type="number" id="bobot3"  value="${bobot[2]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>KUIS</td>
+                    <td>
+                        <input type="number" id="bobot4"  value="${bobot[3]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                </table>
 
 
-            <div class="btnsave">
-              <button onclick="simpandata1()" type="submit">Simpan Data</button>
-            </div>
+                <div class="btnsave">
+                <button onclick="simpandata1()" type="submit">Simpan Data</button>
+                </div>
             `  
             }
             else if (setting=="profit") {
                 content.innerHTML=`
+
+                <div class="str-c">
+                    <div>
+                        <div class=""> Setting Nilai</div>
+                    </div>
+                </div>
+                <hr>
+
                 <table class="tbl">
-            <tr>
-                <td>UAS</td>
-                <td>
-                    <input type="number" id="profit1"  value="${profit[0]}" placeholder="Masukkan Nilai">
-                </td>
-            </tr>
-            <tr>
-                <td>UTS</td>
-                <td>
-                    <input type="number" id="profit2"  value="${profit[1]}" placeholder="Masukkan Nilai">
-                </td>
-            </tr>
-            <tr>
-                <td>TUGAS</td>
-                <td>
-                    <input type="number" id="profit3"  value="${profit[2]}" placeholder="Masukkan Nilai">
-                </td>
-            </tr>
-            <tr>
-                <td>KUIS</td>
-                <td>
-                    <input type="number" id="profit4"  value="${profit[2]}" placeholder="Masukkan Nilai">
-                </td>
-            </tr>
-            </table>
+                <tr>
+                    <td>UAS</td>
+                    <td>
+                        <input type="number" id="profit1"  value="${profit[0]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>UTS</td>
+                    <td>
+                        <input type="number" id="profit2"  value="${profit[1]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>TUGAS</td>
+                    <td>
+                        <input type="number" id="profit3"  value="${profit[2]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>KUIS</td>
+                    <td>
+                        <input type="number" id="profit4"  value="${profit[2]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                </table>
 
 
-            <div class="btnsave">
-              <button onclick="simpandata2()" type="submit">Simpan Data</button>
-            </div>
+                <div class="btnsave">
+                <button onclick="simpandata2()" type="submit">Simpan Data</button>
+                </div>
             `
             }
              
