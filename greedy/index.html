@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Akhir Strategi Algortmik</title>
+</head>
+    <body>
+        <div class="sidebar">
+
+            <div class="title">
+                <h2>Algoritma Greedy</h2>
+                <div class="description">
+                    Penjadwalan Tugas
+                </div>
+            </div>
+
+            <div class="menu">
+
+                <div class="sub-menu">
+                    <label> Max-Min Greedy</label>
+                    <select class="sel_mm" onchange="rendercontent1()">
+                        <option value="Max">Max</option>
+                        <option value="Min">Min</option>
+                    </select>
+                </div>
+
+                <div class="sub-menu">
+                    <label> Variasi Greedy</label>
+                    <select class="sel_gre" onchange="rendercontent1()">
+                        <option value="">Pilih Variasi</option>
+                        <option value="profit">Profit</option>
+                        <option value="weight">Weight</option>
+                        <option value="density">Density</option>
+                    </select>
+                </div>
+
+                <div class="sub-menu">
+                    <label> Setting </label>
+                    <select class="sel" onchange="rendercontent()">
+                        <option value="">Pilih Setting</option>
+                        <option value="bobot">Jam</option>
+                        <option value="profit">Nilai</option>
+                    </select>
+                </div>
+
+                <div class="sub-menu">
+                    <label> Deadline </label>
+                    <input class="input-side" type="number">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="content">
+
+        </div>
+        
+        
+    </body>
+    <script>
+        const content = document.querySelector('.content');
+        let bobot = [60,45,18,26];
+        let profit = [30,30,20,10];
+        let nama = ["UAS","UTS","TUGAS","KUIS"];
+
+
+        function greedymaxprofit(arr) {
+        arr.sort((a, b) => b[2] - a[2]);
+        let schedule = [];
+        let entry_total_time = document.querySelector('.input-side').value;
+        let total_time = parseInt(entry_total_time);
+        let total_profit =0;
+
+        for (let i = 0; i < arr.length; i++) {
+            let task = arr[i];
+            if (total_time >= task[1]) {
+            schedule.push(task[0]);
+            total_profit += task[2];
+            total_time -= task[1];
+            }
+        }
+
+        let remaining_time = total_time;
+        return [remaining_time, schedule,total_profit];
+        }
+
+        function greedyminprofit(arr) {
+        arr.sort((a, b) => a[2] - b[2]);
+        let schedule = [];
+        let entry_total_time = document.querySelector('.input-side').value;
+        let total_time = parseInt(entry_total_time);
+        let total_profit =0;
+
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+            let task = arr[i];
+            if (total_time >= task[1]) {
+            schedule.push(task[0]);
+            total_profit += task[2];
+            total_time -= task[1];
+            }
+        }
+
+        let remaining_time = total_time;
+        return [remaining_time, schedule,total_profit];
+        }
+
+        function greedymaxweight(arr) {
+        arr.sort((a, b) => b[1] - a[1]);
+        let schedule = [];
+        let entry_total_time = document.querySelector('.input-side').value;
+        let total_time = parseInt(entry_total_time);
+        let total_profit =0;
+
+        for (let i = 0; i < arr.length; i++) {
+            let task = arr[i];
+            if (total_time >= task[1]) {
+            schedule.push(task[0]);
+            total_profit += task[2];
+            total_time -= task[1];
+            }
+        }
+
+        let remaining_time = total_time;
+        return [remaining_time, schedule,total_profit];
+        }
+
+        function greedyminweight(arr) {
+        arr.sort((a, b) => a[1] - b[1]);
+        let schedule = [];
+        let entry_total_time = document.querySelector('.input-side').value;
+        let total_time = parseInt(entry_total_time);
+        let total_profit =0;
+
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+            let task = arr[i];
+            if (total_time >= task[1]) {
+            schedule.push(task[0]);
+            total_profit += task[2];
+            total_time -= task[1];
+            }
+        }
+
+        let remaining_time = total_time;
+        return [remaining_time, schedule,total_profit];
+        }
+
+        function greedymaxdensity(arr) {
+        arr.sort((a, b) => (b[2] / b[1]) - (a[2] / a[1]));
+        let schedule = [];
+        let entry_total_time = document.querySelector('.input-side').value;
+        let total_time = parseInt(entry_total_time);
+        let total_profit =0;
+
+        for (let i = 0; i < arr.length; i++) {
+            let task = arr[i];
+            if (total_time >= task[1]) {
+            schedule.push(task[0]);
+            total_profit += task[2];
+            total_time -= task[1];
+            }
+        }
+
+        let remaining_time = total_time;
+        return [remaining_time, schedule,total_profit];
+        }
+
+        function greedymindensity(arr) {
+        arr.sort((a, b) => (b[2] / b[1]) - (a[2] / a[1]));
+        let schedule = [];
+        let entry_total_time = document.querySelector('.input-side').value;
+        let total_time = parseInt(entry_total_time);
+        let total_profit =0;
+
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+            let task = arr[i];
+            if (total_time >= task[1]) {
+            schedule.push(task[0]);
+            total_profit += task[2];
+            total_time -= task[1];
+            }
+        }
+
+        let remaining_time = total_time;
+        return [remaining_time, schedule,total_profit];
+        }
+
+        function rendercontent1(){
+            const VariasiGreedy = document.querySelector('.sel_gre').value;
+            const greedy = document.querySelector('.sel_mm').value;
+            let newarr = [];
+            for (let i = 0; i < nama.length; i++) {
+            newarr.push([nama[i], bobot[i], profit[i]]);
+            }
+            console.log(newarr);
+
+            if (VariasiGreedy=="profit") {
+                let remaining_time;
+                let schedule;
+                let total_profit;
+                if (greedy=="Min") {
+                    [remaining_time,schedule,total_profit]=greedyminprofit(newarr);
+                }
+                else if(greedy=="Max"){
+                    [remaining_time,schedule,total_profit]=greedymaxprofit(newarr);
+                }
+
+                content.innerHTML=`
+                <table  class="tbl-hasil">
+                    <tr>
+                        <td>tugas yang dijadwalkan:</td>
+                        <td>
+                            <th>${schedule}</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>total profit:</td>
+                        <td>
+                            <th>${total_profit}</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sisa waktu:</td>
+                        <td>
+                            <th>${remaining_time}</th>
+                        </td>
+                    </tr>
+                </table>
+                `   
+            }
+            else if (VariasiGreedy=="weight") {
+                let remaining_time;
+                let schedule;
+                let total_profit;
+                if (greedy=="Min") {
+                    [remaining_time,schedule,total_profit]=greedyminweight(newarr);
+                }
+                else if(greedy=="Max"){
+                    [remaining_time,schedule,total_profit]=greedymaxweight(newarr);
+                }
+
+                content.innerHTML=`
+                <table  class="tbl-hasil">
+                    <tr>
+                        <td>tugas yang dijadwalkan:</td>
+                        <td>
+                            <th>${schedule}</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>total profit:</td>
+                        <td>
+                            <th>${total_profit}</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sisa waktu:</td>
+                        <td>
+                            <th>${remaining_time}</th>
+                        </td>
+                    </tr>
+                </table>
+                `  
+            }
+            else if (VariasiGreedy=="density") {
+                let remaining_time;
+                let schedule;
+                let total_profit;
+                if (greedy=="Min") {
+                    [remaining_time,schedule,total_profit]=greedymindensity(newarr);
+                }
+                else if(greedy=="Max"){
+                    [remaining_time,schedule,total_profit]=greedymaxdensity(newarr);
+                }
+
+                content.innerHTML=`
+                <table  class="tbl-hasil">
+                    <tr>
+                        <td>tugas yang dijadwalkan:</td>
+                        <td>
+                            <th>${schedule}</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>total profit:</td>
+                        <td>
+                            <th>${total_profit}</th>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sisa waktu:</td>
+                        <td>
+                            <th>${remaining_time}</th>
+                        </td>
+                    </tr>
+                </table>
+                `
+            }
+
+        }
+
+        function rendercontent() {
+            const setting = document.querySelector('.sel').value;
+            if (setting=="bobot") {
+                content.innerHTML=`
+
+            <table class="tbl">
+            <tr>
+                <td>UAS</td>
+                <td>
+                    <input type="number" id="bobot1" value="${bobot[0]}"  placeholder="Masukkan Jam">
+                </td>
+            </tr>
+            <tr>
+                <td>UTS</td>
+                <td>
+                    <input type="number" id="bobot2"  value="${bobot[1]}" placeholder="Masukkan Jam">
+                </td>
+            </tr>
+            <tr>
+                <td>TUGAS</td>
+                <td>
+                    <input type="number" id="bobot3"  value="${bobot[2]}" placeholder="Masukkan Jam">
+                </td>
+            </tr>
+            <tr>
+                <td>KUIS</td>
+                <td>
+                    <input type="number" id="bobot4"  value="${bobot[3]}" placeholder="Masukkan Jam">
+                </td>
+            </tr>
+            </table>
+
+
+            <div>
+              <button onclick="simpandata1()" type="submit">Simpan Data</button>
+            </div>
+            `  
+            }
+            else if (setting=="profit") {
+                content.innerHTML=`
+                <table class="tbl">
+            <tr>
+                <td>UAS</td>
+                <td>
+                    <input type="number" id="profit1"  value="${profit[0]}" placeholder="Masukkan profit">
+                </td>
+            </tr>
+            <tr>
+                <td>UTS</td>
+                <td>
+                    <input type="number" id="profit2"  value="${profit[1]}" placeholder="Masukkan profit">
+                </td>
+            </tr>
+            <tr>
+                <td>TUGAS</td>
+                <td>
+                    <input type="number" id="profit3"  value="${profit[2]}" placeholder="Masukkan profit">
+                </td>
+            </tr>
+            <tr>
+                <td>KUIS</td>
+                <td>
+                    <input type="number" id="profit4"  value="${profit[2]}" placeholder="Masukkan profit">
+                </td>
+            </tr>
+            </table>
+
+
+            <div>
+              <button onclick="simpandata2()" type="submit">Simpan Data</button>
+            </div>
+            `
+            }
+             
+        }
+        function simpandata1(){
+            bobot1 = document.querySelector('#bobot1').value;
+            bobot2 = document.querySelector('#bobot2').value;
+            bobot3 = document.querySelector('#bobot3').value;
+            bobot4 = document.querySelector('#bobot4').value;
+            bobot = [bobot1,bobot2,bobot3,bobot4];
+        }
+        function simpandata2(){
+            profit1 = document.querySelector('#profit1').value;
+            profit2 = document.querySelector('#profit2').value;
+            profit3 = document.querySelector('#profit3').value;
+            profit4 = document.querySelector('#profit4').value;
+            profit = [profit1,profit2,profit3,profit4];
+        }
+
+    </script>
+</html>
