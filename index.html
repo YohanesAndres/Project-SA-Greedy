@@ -77,9 +77,10 @@
 
     <script>
         const content = document.querySelector('.content');
-        let bobot = [60,45,18,26];
-        let profit = [30,30,20,10];
-        let nama = ["UAS","UTS","TUGAS","KUIS"];
+        let bobot = [60,45,18,26,30,30,20,10];
+        let profit = [30,30,20,10,60,45,18,26];
+        let nama = ["Data Science","Information Retrieval","Komputasi Paralel","Metode Penulisan Ilmiah",
+        "Pendidkan Kewarganegaraan","Pengolahan Citra Digital","Strategi Algoritmik","Kerja Praktek"];
 
 
         function greedymaxprofit(arr) {
@@ -358,27 +359,51 @@
                 
                 <table class="tbl">
                 <tr>
-                    <td>UAS</td>
+                    <td>Data Science</td>
                     <td>
                         <input type="number" id="bobot1" value="${bobot[0]}"  placeholder="Masukkan Jam">
                     </td>
                 </tr>
                 <tr>
-                    <td>UTS</td>
+                    <td>Information Retrival</td>
                     <td>
                         <input type="number" id="bobot2"  value="${bobot[1]}" placeholder="Masukkan Jam">
                     </td>
                 </tr>
                 <tr>
-                    <td>TUGAS</td>
+                    <td>Komputasi Paralel</td>
                     <td>
                         <input type="number" id="bobot3"  value="${bobot[2]}" placeholder="Masukkan Jam">
                     </td>
                 </tr>
                 <tr>
-                    <td>KUIS</td>
+                    <td>Metode Penulisan Ilmiah</td>
                     <td>
                         <input type="number" id="bobot4"  value="${bobot[3]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pendidikan Kewarganegaraan</td>
+                    <td>
+                        <input type="number" id="bobot5"  value="${bobot[4]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pengolahan Citra Digital</td>
+                    <td>
+                        <input type="number" id="bobot6"  value="${bobot[5]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Strategi Algoritmik</td>
+                    <td>
+                        <input type="number" id="bobot7"  value="${bobot[6]}" placeholder="Masukkan Jam">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kerja Praktik</td>
+                    <td>
+                        <input type="number" id="bobot8"  value="${bobot[7]}" placeholder="Masukkan Jam">
                     </td>
                 </tr>
                 </table>
@@ -401,27 +426,51 @@
 
                 <table class="tbl">
                 <tr>
-                    <td>UAS</td>
+                    <td>Data Science</td>
                     <td>
                         <input type="number" id="profit1"  value="${profit[0]}" placeholder="Masukkan Nilai">
                     </td>
                 </tr>
                 <tr>
-                    <td>UTS</td>
+                    <td>Information Retrival</td>
                     <td>
                         <input type="number" id="profit2"  value="${profit[1]}" placeholder="Masukkan Nilai">
                     </td>
                 </tr>
                 <tr>
-                    <td>TUGAS</td>
+                    <td>Komputasi Paralel</td>
                     <td>
                         <input type="number" id="profit3"  value="${profit[2]}" placeholder="Masukkan Nilai">
                     </td>
                 </tr>
                 <tr>
-                    <td>KUIS</td>
+                    <td>Metode Penulisan Ilmiah</td>
                     <td>
-                        <input type="number" id="profit4"  value="${profit[2]}" placeholder="Masukkan Nilai">
+                        <input type="number" id="profit4"  value="${profit[3]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pendidikan Kewarganegaraan</td>
+                    <td>
+                        <input type="number" id="profit5"  value="${profit[4]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pengolahan Citra Digital</td>
+                    <td>
+                        <input type="number" id="profit6"  value="${profit[5]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Strategi Algoritmik</td>
+                    <td>
+                        <input type="number" id="profit7"  value="${profit[6]}" placeholder="Masukkan Nilai">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kerja Praktik</td>
+                    <td>
+                        <input type="number" id="profit8"  value="${profit[7]}" placeholder="Masukkan Nilai">
                     </td>
                 </tr>
                 </table>
@@ -439,14 +488,22 @@
             bobot2 = document.querySelector('#bobot2').value;
             bobot3 = document.querySelector('#bobot3').value;
             bobot4 = document.querySelector('#bobot4').value;
-            bobot = [bobot1,bobot2,bobot3,bobot4];
+            bobot5 = document.querySelector('#bobot5').value;
+            bobot6 = document.querySelector('#bobot6').value;
+            bobot7 = document.querySelector('#bobot7').value;
+            bobot8 = document.querySelector('#bobot8').value;
+            bobot = [bobot1,bobot2,bobot3,bobot4,bobot5,bobot6,bobot7,bobot8];
         }
         function simpandata2(){
             profit1 = document.querySelector('#profit1').value;
             profit2 = document.querySelector('#profit2').value;
             profit3 = document.querySelector('#profit3').value;
             profit4 = document.querySelector('#profit4').value;
-            profit = [profit1,profit2,profit3,profit4];
+            profit5 = document.querySelector('#profit5').value;
+            profit6 = document.querySelector('#profit6').value;
+            profit7 = document.querySelector('#profit7').value;
+            profit8 = document.querySelector('#profit8').value;
+            profit = [profit1,profit2,profit3,profit4,profit5,profit6,profit7,profit8];
         }
 
     </script>
