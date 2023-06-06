@@ -17,7 +17,7 @@ body {
   height: 99vh;
   padding: 27px 22px;
   background: #FFFFFF;
-  box-shadow: 0px 0px 10px 4px rgba(9, 0, 67, 0.08);
+  box-shadow: 1px 0px 10px 4px rgba(31, 0, 234, 0.08);
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -91,30 +91,46 @@ select {
 
 .tbl {
   margin-top: 50px;
-  width: 90vh;
-  height: 30vh;
-  margin-left: 20px;
+  width: 90%;
+  max-width: 8000px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
+  border-collapse: collapse;
+  box-shadow: 1px 1px 10px 4px rgba(44, 14, 219, 0.08);
 }
 
 .tbl td {
   padding: 5px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #CCCCCC;
+  
+}
+
+.tbl tr:nth-child(2n) td {
+  background-color: #F2F2F2;
 }
 
 .tbl input {
-  width: 890px;
+  width: 100%;
   padding: 5px;
+  background-color: #F2F2F2;
+  border: 0.5px solid #CCCCCC;
+  border-radius: 1px;
 }
 
-.str-c{
+.str-c {
   margin-bottom: 15px;
   margin-top: 15px;
   font-size: 20px;
 }
 
 .btnsave {
-  margin-left: 25px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
+  text-align: center;
+  
 }
 
 .btnsave button {
@@ -124,6 +140,11 @@ select {
   border: none;
   cursor: pointer;
   font-size: 14px;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  
 }
 
 .btnsave button:hover {
@@ -131,26 +152,46 @@ select {
 }
 
 input {
-  width: 700px;
+  width: 100%;
   height: 30px;
 }
 
 .tbl-hasil {
   margin-top: 50px;
   background-color: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 1px;
   box-shadow: 0px 0px 10px 4px rgba(9, 0, 67, 0.08);
   padding: 20px;
-  margin-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
+  max-width: 800px;
+  width: 90%;
+  border-collapse: collapse;
 }
 
 .tbl-hasil td:first-child {
-  width: 250px;
+  width: 430px;
+  font-weight: bold;
 }
 
 .tbl-hasil tr {
   height: 30px;
+  
+}
+
+.tbl-hasil th,
+.tbl-hasil td {
+  
+  padding: 10px;
+  text-align: left;
+  border-bottom: 5px solid #dddddd;
+}
+
+.tbl-hasil th {
+  background-color: #f2f2f2;
+  width: 510px;
+  
 }
 
 .ftr {
@@ -181,5 +222,8 @@ input {
 
   .tbl {
     width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
