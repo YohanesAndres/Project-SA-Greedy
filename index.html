@@ -77,8 +77,8 @@
 
     <script>
         const content = document.querySelector('.content');
-        let bobot = [60,45,18,26,30,30,20,10];
-        let profit = [30,30,20,10,60,45,18,26];
+        let bobot = [60,45,90,26,30,30,70,10];
+        let profit = [30,30,5,10,60,45,18,26];
         let nama = ["Data Science","Information Retrieval","Komputasi Paralel","Metode Penulisan Ilmiah",
         "Pendidkan Kewarganegaraan","Pengolahan Citra Digital","Strategi Algoritmik","Kerja Praktek"];
 
@@ -240,7 +240,7 @@
                     <tr>
                         <td>Tugas yang dijadwalkan:</td>
                         <td>
-                            <th>${schedule}</th>
+                            <th>${schedule.join(" => ")}</th>
                         </td>
                     </tr>
                     <tr>
@@ -282,7 +282,7 @@
                     <tr>
                         <td>Tugas yang dijadwalkan:</td>
                         <td>
-                            <th>${schedule}</th>
+                            <th>${schedule.join(" => ")}</th>
                         </td>
                     </tr>
                     <tr>
@@ -324,7 +324,7 @@
                     <tr>
                         <td>Tugas yang dijadwalkan:</td>
                         <td>
-                            <th>${schedule}</th>
+                            <th>${schedule.join(" => ")}</th>
                         </td>
                     </tr>
                     <tr>

@@ -110,6 +110,9 @@ select {
   background-color: #FFFFFF;
   border: 1.5px solid #CCCCCC;
 }
+.tbl tr td:first-child{
+  width:360px;
+}
 
 .tbl tr:nth-child(2n) td {
   background-color: #F2F2F2;
