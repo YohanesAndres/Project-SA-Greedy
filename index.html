@@ -92,7 +92,7 @@
 
         for (let i = 0; i < arr.length; i++) {
             let task = arr[i];
-            if (total_time >= task[1]) {
+            if (total_time >= task[1] && total_time - task[1] >= 0) {
             schedule.push(task[0]);
             total_profit += task[2];
             total_time -= task[1];
@@ -113,7 +113,7 @@
         console.log(arr);
         for (let i = 0; i < arr.length; i++) {
             let task = arr[i];
-            if (total_time >= task[1]) {
+            if (total_time >= task[1] && total_time - task[1] >= 0) {
             schedule.push(task[0]);
             total_profit += task[2];
             total_time -= task[1];
@@ -133,7 +133,7 @@
 
         for (let i = 0; i < arr.length; i++) {
             let task = arr[i];
-            if (total_time >= task[1]) {
+            if (total_time >= task[1] && total_time - task[1] >= 0) {
             schedule.push(task[0]);
             total_profit += task[2];
             total_time -= task[1];
@@ -154,7 +154,7 @@
         console.log(arr);
         for (let i = 0; i < arr.length; i++) {
             let task = arr[i];
-            if (total_time >= task[1]) {
+            if (total_time >= task[1] && total_time - task[1] >= 0) {
             schedule.push(task[0]);
             total_profit += task[2];
             total_time -= task[1];
@@ -174,7 +174,7 @@
 
         for (let i = 0; i < arr.length; i++) {
             let task = arr[i];
-            if (total_time >= task[1]) {
+            if (total_time >= task[1] && total_time - task[1] >= 0) {
             schedule.push(task[0]);
             total_profit += task[2];
             total_time -= task[1];
@@ -195,7 +195,7 @@
         console.log(arr);
         for (let i = 0; i < arr.length; i++) {
             let task = arr[i];
-            if (total_time >= task[1]) {
+            if (total_time >= task[1] && total_time - task[1] >= 0) {
             schedule.push(task[0]);
             total_profit += task[2];
             total_time -= task[1];
